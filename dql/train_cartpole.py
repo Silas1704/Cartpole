@@ -10,7 +10,7 @@ from rl.agents.dqn import DQNAgent
 from rl.policy import EpsGreedyQPolicy
 from rl.memory import SequentialMemory
 
-print("step1 completed")
+
 ENV_NAME = 'CartPole-v0'
 
 # Get the environment and extract the number of actions available in the Cartpole problem
@@ -19,7 +19,7 @@ env = gym.make(ENV_NAME)
 
 nb_actions = env.action_space.n
 
-print("step2 completed")
+
 
 model = Sequential()
 model.add(Flatten(input_shape=(1,) + env.observation_space.shape))
@@ -29,7 +29,7 @@ model.add(Dense(nb_actions))
 model.add(Activation('linear'))
 print(model.summary())
 
-print("step3 completed")
+
 
 policy = EpsGreedyQPolicy()
 memory = SequentialMemory(limit=50000, window_length=1)
