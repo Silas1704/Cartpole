@@ -1,6 +1,6 @@
 import numpy as np
 import gym
-
+#cartpole game
 import tensorflow as tf
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
@@ -28,8 +28,6 @@ model.add(Activation('relu'))
 model.add(Dense(nb_actions))
 model.add(Activation('linear'))
 print(model.summary())
-
-
 
 policy = EpsGreedyQPolicy()
 memory = SequentialMemory(limit=50000, window_length=1)
