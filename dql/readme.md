@@ -2,6 +2,11 @@
 ## This repo focuses on creating a Deep Q Learing model for the purpose of training a cartpole to stand still without falling down.
 
 ### To Run 
+## First install the requirements 
+```bash
+pip install -r requirements.txt
+```
+## Then
 ``` bash
 python train_cartpole.py
 ```
